@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@plugin "daisyui" {
+    themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+    name: "silk";
+    default: false;
+    prefersdark: false;
+    color-scheme: "light";
+    --color-base-100: #ffffff;
+    --color-base-200: #f5f5f7;
+    --color-base-300: #ededf0;
+    --color-base-content: #0e0e10;
+    --color-primary: #2d5be3;
+    --color-primary-content: #ffffff;
+    --color-secondary: #0e0e10;
+    --color-secondary-content: oklch(100% 0 0);
+    --color-accent: #1a3fa8;
+    --color-accent-content: #ffffff;
+    --color-neutral: #3a3a42;
+    --color-neutral-content: #ffffff;
+    --color-info: #1a3fa8;
+    --color-info-content: #ffffff;
+    --color-success: #1a9e6b;
+    --color-success-content: #ffffff;
+    --color-warning: #c97b1a;
+    --color-warning-content: oklch(100% 0 0);
+    --color-error: #d63b3b;
+    --color-error-content: oklch(100% 0 0);
+    --radius-selector: 2rem;
+    --radius-field: 1rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 2px;
+    --depth: 0;
+    --noise: 0;
+}
+
+/* DM Sans Variable */
+@font-face {
+    font-family: "DM Sans";
+    src: url("../../public/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf")
+        format("truetype-variations");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url("../../public/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf")
+        format("truetype-variations");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+/* Instrument Serif */
+@font-face {
+    font-family: "Instrument Serif";
+    src: url("../../public/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf")
+        format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Instrument Serif";
+    src: url("../../public/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf")
+        format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@theme {
+    /* ── FONTS ─────────────────────────────────────────────── */
+    --font-display: "Instrument Serif", Georgia, serif;
+    --font-body: "DM Sans", system-ui, sans-serif;
+    --font-sans: "DM Sans", system-ui, sans-serif;
+
+    /* Ink — text, dark UI */
+    --color-ink: #0e0e10;
+    --color-ink-2: #3a3a42;
+    --color-ink-3: #7a7a88;
+    --color-ink-4: #b4b4c0;
+
+    /* ── TYPE SCALE ─────────────────────────────────────────── */
+    --text-2xs: 0.625rem; /* 10px — eyebrows, labels          */
+    --text-xs: 0.6875rem; /* 11px — badges, captions          */
+    --text-sm: 0.75rem; /* 12px — hints, meta               */
+    --text-base: 0.875rem; /* 14px — body, form text           */
+    --text-md: 0.9375rem; /* 15px — default body              */
+    --text-lg: 1.0625rem; /* 17px — large body                */
+    --text-xl: 1.25rem; /* 20px — h4 / card titles          */
+    --text-2xl: 1.5rem; /* 24px — h3                        */
+    --text-3xl: 1.75rem; /* 28px — h2 / section titles       */
+    --text-4xl: 2rem; /* 32px — h1 / page titles          */
+    --text-5xl: 2.5rem; /* 40px — hero subheadings          */
+    --text-6xl: 3rem; /* 48px — hero headings             */
+    --text-7xl: 3.5rem; /* 56px — large hero                */
+    --text-8xl: 4.5rem; /* 72px — display / stat numbers    */
+
+    /* SURFACE — BACKGROUNDS */
+    --color-surface: #ffffff;
+    --color-surface-2: #f5f5f7;
+    --color-surface-3: #ededf0;
+
+    --color-success: #1a9e6b;
+    --color-success-bg: #e8f7f1;
+    --color-warning: #c97b1a;
+    --color-warning-bg: #fdf3e3;
+    --color-danger: #d63b3b;
+    --color-danger-bg: #fdeaea;
+    --color-purple: #7c3aed;
+    --color-purple-bg: #f5f3ff;
+
+    /* BORDER ALPHA LEVELS */
+    --color-border: rgba(14, 14, 16, 0.08);
+    --color-border-md: rgba(14, 14, 16, 0.12);
+    --color-border-lg: rgba(14, 14, 16, 0.2);
+
+    /* BORDER RADIUS */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-3xl: 32px;
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* Remove number arrows */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    /* Thin scrollbar */
+    ::-webkit-scrollbar {
+        @apply w-1.5 h-1.5;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-surface-3 rounded-full;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-ink-4 rounded-full;
+    }
+}
+
+[x-cloak] {
+    display: none !important;
+}
