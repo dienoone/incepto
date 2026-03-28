@@ -21,10 +21,11 @@
         'accepted', 'remote', 'success' => 'badge-success badge-soft',
         'interview', 'internship', 'fancy' => 'badge-secondary badge-soft',
         'rejected', 'declined', 'contract', 'temporary', 'closed' => 'badge-ghost bg-base-200 text-base-content/70',
+        'neutral' => 'badge-neutral text-surface',
         default => 'badge-ghost bg-base-200 text-ink-3',
     };
 
-    $showDot = $dot || in_array($type, ['pending', 'reviewed', 'interview', 'accepted', 'rejected', 'declined', 'new']);
+    $showDot = $dot || in_array($type, ['pending', 'reviewed', 'interview', 'accepted', 'rejected', 'declined']);
 
     $dotColor = match (true) {
         str_contains($daisyClass, 'badge-warning') => 'bg-warning',

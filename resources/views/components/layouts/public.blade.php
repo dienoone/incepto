@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-surface-2">
+<body class="bg-surface-3">
     <x-shared.navbar :context="$context ?? null" />
 
     <main>

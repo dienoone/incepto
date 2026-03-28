@@ -36,10 +36,10 @@
     --color-error-content: oklch(100% 0 0);
     --radius-selector: 2rem;
     --radius-field: 1rem;
-    --radius-box: 0.5rem;
-    --size-selector: 0.25rem;
-    --size-field: 0.25rem;
-    --border: 2px;
+    --radius-box: 1rem;
+    --size-selector: 0.1875rem;
+    --size-field: 0.1875rem;
+    --border: 0.5px;
     --depth: 0;
     --noise: 0;
 }
