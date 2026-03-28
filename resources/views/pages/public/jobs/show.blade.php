@@ -11,7 +11,6 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6 items-start">
-
             <div class="min-w-0">
                 <div class="card bg-surface border border-border overflow-hidden mb-5 job-hero">
                     <div class="relative h-28 sm:h-32 overflow-hidden"

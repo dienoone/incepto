@@ -21,10 +21,9 @@
         @endisset
 
         <div class="hidden md:flex flex-1 max-w-xs ml-1">
-            {{-- {{ route('jobs.index') }} --}}
-            <form action="" method="GET" class="w-full">
-                <x-ui.input type="text" name="q" icon="magnifying-glass"
-                    placeholder="Search jobs, companies..." :value="request('q')" />
+            <form action="{{ route('jobs.index') }}" method="GET" class="w-full">
+                <x-ui.input type="text" name="q" icon="magnifying-glass" placeholder="Search jobs...."
+                    :value="request('q')" />
             </form>
         </div>
 
@@ -43,8 +42,7 @@
                 </a>
             </li>
             <li>
-                {{-- {{ route('companies.index') }} --}}
-                <a href=""
+                <a href="{{ route('companies.index') }}"
                     class="rounded-lg text-sm font-medium {{ request()->routeIs('companies.*') ? 'bg-base-200 text-base-content' : 'text-base-content/60 hover:bg-base-200 hover:text-base-content' }}">
                     Companies
                 </a>
@@ -183,15 +181,13 @@
                 </a>
             </li>
             <li>
-                {{-- {{ route('jobs.index') }} --}}
-                <a href=""
+                <a href="{{ route('jobs.index') }}"
                     class="rounded-lg {{ request()->routeIs('jobs.*') ? 'bg-base-200 font-medium' : '' }}">
                     Jobs
                 </a>
             </li>
             <li>
-                {{-- {{ route('companies.index') }} --}}
-                <a href=""
+                <a href="{{ route('companies.index') }}"
                     class="rounded-lg {{ request()->routeIs('companies.*') ? 'bg-base-200 font-medium' : '' }}">
                     Companies
                 </a>
