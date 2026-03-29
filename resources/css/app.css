@@ -120,6 +120,11 @@
     --color-purple: #7c3aed;
     --color-purple-bg: #f5f3ff;
 
+    /* Logo */
+    --color-teal-bg: #e0f5ee;
+    --color-slate-bg: #f1f5f9;
+    --color-indigo-bg: #e0e7ff;
+
     /* BORDER ALPHA LEVELS */
     --color-border: rgba(14, 14, 16, 0.08);
     --color-border-md: rgba(14, 14, 16, 0.12);

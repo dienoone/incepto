@@ -75,4 +75,11 @@ class Job extends Model
         return $query->where('status', JobStatus::OPEN)
             ->where('expires_at', '>', now());
     }
+
+    public function isBookmarkedBy(User $user): bool
+    {
+        return $this->bookmarks()
+            ->where('seeker_id', $user->id)
+            ->exists();
+    }
 }
