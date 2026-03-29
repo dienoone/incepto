@@ -17,11 +17,11 @@
 @php
     $daisyClass = match ($type) {
         'pending', 'part-time', 'warning' => 'badge-warning badge-soft',
-        'reviewed', 'full-time', 'hybrid', 'primary', 'info' => 'badge-primary badge-soft',
-        'accepted', 'remote', 'success' => 'badge-success badge-soft',
+        'reviewed', 'full-time', 'hybrid', 'primary', 'info', 'draft' => 'badge-primary badge-soft',
+        'accepted', 'remote', 'success', 'open' => 'badge-success badge-soft',
         'interview', 'internship', 'fancy' => 'badge-secondary badge-soft',
         'rejected', 'declined', 'contract', 'temporary', 'closed' => 'badge-ghost bg-base-200 text-base-content/70',
-        'neutral' => 'badge-neutral text-surface',
+        'neutral', 'expired' => 'badge-neutral text-surface',
         default => 'badge-ghost bg-base-200 text-ink-3',
     };
 

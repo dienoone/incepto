@@ -40,7 +40,7 @@
     @endif
 
     <label
-        class="input input-sm rounded-lg -mt-1 outline-none focus-within:outline-none {{ $hasError ? 'input-error' : '' }} w-full">
+        class="input input-sm -mt-1 outline-none focus-within:outline-none {{ $hasError ? 'input-error' : '' }} w-full">
 
         {{-- Left icon --}}
         @if ($icon)

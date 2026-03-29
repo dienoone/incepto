@@ -81,9 +81,9 @@
             <div class="dropdown dropdown-end">
                 <div tabindex="0" role="button"
                     class="btn btn-ghost btn-sm rounded-full pl-1 pr-3 py-1 h-auto border border-base-200 gap-2">
-                    <div class="avatar placeholder">
-                        <div class="w-7 rounded-full bg-neutral text-neutral-content">
-                            <span class="text-xs font-medium">
+                    <div class="avatar avatar-placeholder">
+                        <div class="bg-slate-bg w-7 rounded-full">
+                            <span class="text-xs text-ink">
                                 {{ strtoupper(substr(auth()->user()->first_name, 0, 2)) }}
                             </span>
                         </div>
